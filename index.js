@@ -3,7 +3,7 @@ const mysql = require('mysql2');
 const path = require('path');
 
 const app = express();
-const port = 4000;
+const port = 3000;
 
 
 app.use(express.json());
@@ -12,11 +12,11 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname)));
 
 const db = mysql.createConnection({
-    host: 'localhost',
-    port: 4000,
-    user: 'root',
-    password: '1234', 
-    database: 'duelo_albuns',
+    host: process.env.DB_HOST || 'localhost',
+    port: process.env.DB_PORT || 3000,
+    user: process.env.DB_USER || 'root',
+    password: process.env.DB_PASSWORD || '123456', 
+    database: process.env.DB_NAME || 'duelo_albuns',
     ssl: {
         minVersion: 'TLSv1.2',
         rejectUnauthorized: true
@@ -87,7 +87,9 @@ app.delete('/api/resetar/:artista', (req, res) => {
     });
 });
 
+const port = process.env.PORT || 4000;
+
 // Iniciar servidor
 app.listen(port, () => {
-    console.log(`Servidor rodando em http://localhost:${port}`);
+    console.log(`Servidor rodando na porta ${port}`);
 });
