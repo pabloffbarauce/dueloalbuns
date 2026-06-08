@@ -12,7 +12,7 @@ app.use(express.static(path.join(__dirname)));
 
 const db = mysql.createConnection({
     host: process.env.DB_HOST || 'localhost',
-    port: process.env.DB_PORT || 3000,
+    port: process.env.DB_PORT || 4000,
     user: process.env.DB_USER || 'root',
     password: process.env.DB_PASSWORD || '123456', 
     database: process.env.DB_NAME || 'duelo_albuns',
@@ -86,7 +86,7 @@ app.delete('/api/resetar/:artista', (req, res) => {
     });
 });
 
-const port = process.env.PORT || 4000;
+const port = process.env.PORT || 3000;
 
 // Iniciar servidor
 app.listen(port, () => {
