@@ -3,6 +3,6 @@ O Duelo de álbuns é um site destinado a registrar quais são os álbuns favori
 
 <h2>Execução</h2>
 Para a execução, será necessário o Node.js e MySQL:
-Use o comando **npm install** para as dependências do projeto.
-Crie um banco de dados utilizando os comandos de _db_musicas.sql_.
-Para a execução do projeto utilize **node index.js** e o servidor abrirá em **http://localhost:3000**.
+Use o comando npm install para instalar as dependências do projeto.
+Crie um banco de dados utilizando os comandos de db_musicas.sql.
+Para a execução do projeto utilize node index.js e o servidor abrirá em http://localhost:3000.
