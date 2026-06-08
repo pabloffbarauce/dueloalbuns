@@ -12,10 +12,10 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname)));
 
 const db = mysql.createConnection({
-    host: 'gateway01.us-east-1.prod.aws.tidbcloud.com',
+    host: 'localhost',
     port: 4000,
-    user: '4BimpyKuyLgWSwW.root',
-    password: 'Lpg6Zz2zN1mpnbcW', 
+    user: 'root',
+    password: '1234', 
     database: 'duelo_albuns',
     ssl: {
         minVersion: 'TLSv1.2',
