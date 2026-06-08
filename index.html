@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <title>Duelo de Álbuns</title>
+</head>
+
+<body>
+    <header>
+        <h1>Duelo de Álbuns</h1>
+        <h3> Como funciona?</h3>
+        <h4>O duelo de álbuns é um jogo onde você seleciona um artista e escolhe entre quais álbuns você prefere. <br> Ao final, uma tabela exibe a pontuação e aponta os álbuns favoritos dos usuários para aquele artista.</h4>
+    </header>
+    <div class = "busca-container">
+        <label for = "artista">Escolha um artista:</label>
+        <input type = "text" id = "artista" list = "artistas-sugeridos" placeholder = "Digite o nome do artista" required>
+        <datalist id = "artistas-sugeridos">
+        </datalist>
+        <button id = "botao-iniciar">Iniciar duelo</button>
+    </div>
+    <br>
+    <div class = "escolha-albuns">
+        <h2 id = "status-rodada">Escolha seu favorito:</h2>
+        <div id = "container-opcoes"></div>
+    </div>
+
+    <div id = "ranking" style = "display: none;">
+        <h2>Ranking do artista</h2>
+        <ul id = "lista-ranking">
+            <li>Nenhum duelo iniciado ainda.</liL>
+        </ul>
+        <div style = "justify-self: center">
+            <button id="botao-reset">Resetar Histórico</button>
+        </div>
+    </div>
+    <script src="scripts/script.js"></script>
+</body>
+
+</html>

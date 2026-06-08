@@ -1,0 +1,158 @@
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{
+    background-color: rgb(223, 231, 238);
+    color: rgb(51, 51, 51);
+    margin: 0px;
+    padding: 20px;
+}
+
+h1, h2, h3, h4{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+h1{
+    color: rgb(47, 93, 121);
+    font-size: 32px;
+}
+
+h3, h4{
+    color: rgb(80, 85, 90);
+}
+
+.busca-container{
+    text-align: center;
+    margin: 30px auto;
+}
+
+#artista{
+    display: inline-block;
+    width: 270px;
+    font-size: 16px;
+    padding: 5px;
+    border-radius: 6px;
+    outline: none;
+    border: 2px solid rgb(224, 224, 224);
+    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+
+#artista:hover, #artista:focus {
+    border-color: rgb(110, 0, 255);
+}
+
+#botao-iniciar{
+    height: 32px;
+    padding: 0 15px;
+    border-radius: 6px;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgb(224, 224, 224);
+    color: rgb(82, 170, 31);
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+
+#botao-iniciar:hover {
+    border-color: rgb(110, 0, 255);
+}
+
+#ranking {
+    max-width: 500px;
+    margin: 40px auto;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgb(226, 232, 240);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+}
+
+#lista-ranking {
+    list-style-position: inside;
+    padding: 0;
+    text-align: left;
+}
+
+#lista-ranking li {
+    padding: 10px;
+    border-bottom: 1px solid #edf2f7;
+}
+
+#lista-ranking li:last-child {
+    border-bottom: none;
+}
+
+#lista-ranking strong {
+    color: rgb(74, 144, 226); 
+}
+
+#container-opcoes {
+    display: flex;
+    justify-content: center; 
+    gap: 30px;               
+    flex-wrap: wrap;         
+    margin-top: 30px;
+}
+
+.card-album {
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgb(224, 224, 224);
+    border-radius: 12px;
+    padding: 20px;
+    width: 200px;            
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+    cursor: pointer;
+    user-select: none;
+}
+
+.card-album:hover {
+    transform: translateY(-13px); 
+    box-shadow: 0 12px 20px rgb(110, 0, 255, 0.15);
+    border-color: rgb(110, 0, 255);
+}
+
+.capa-album {
+    width: 150px;
+    height: 150px;
+    border-radius: 8px;
+    object-fit: cover;
+    margin-bottom: 15px;
+    pointer-events: none;
+}
+
+.titulo-album {
+    display: block;
+    font-size: 15px;
+    color: rgb(54, 54, 54);
+    font-weight: bold;
+    line-height: 1.5;
+    min-height: 30px;
+    pointer-events: none;
+    background-color: transparent;
+    padding: 0 5px;
+}
+
+#botao-reset {
+    text-align: center;
+    margin-top: 20px;
+    height: 32px;
+    padding: 0 15px;
+    border-radius: 6px;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgb(224, 224, 224);
+    color: rgb(211, 47, 47);
+    cursor: pointer;
+    font-weight: bold;
+    outline: none;
+    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+
+#botao-reset:hover {
+    border-color: rgb(255, 50, 50);
+    color: rgb(255, 50, 50);   
+    box-shadow: 0 4px 10px rgba(255, 0, 0, 0.05);
+}
