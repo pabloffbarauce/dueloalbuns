@@ -12,18 +12,22 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname)));
 
 const db = mysql.createConnection({
-    host: 'localhost',
-    port: 3306,
-    user: 'root',
-    password: '123456', 
+    host: 'gateway01.us-east-1.prod.aws.tidbcloud.com',
+    port: 4000,
+    user: '4BimpyKuyLgWSwW.root',
+    password: 'Lpg6Zz2zN1mpnbcW', 
     database: 'duelo_albuns',
+    ssl: {
+        minVersion: 'TLSv1.2',
+        rejectUnauthorized: true
+    }
 });
 
 db.connect((err) => {
     if (err) {
         console.error('Erro ao conectar ao banco:', err);
     } else {
-        console.log('Conectado ao MySQL com sucesso!');
+        console.log('Conectado ao banco de dados com sucesso!');
     }
 });
 
